@@ -49,3 +49,7 @@ git submodule update --init --recursive
 cd ..
 
 echo finished!
+
+echo "You need to run 'source ~/.bashrc'"
+echo "'source ~/.bashrc'"
+echo "To update the path variables on any open terminals."
