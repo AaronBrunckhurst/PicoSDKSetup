@@ -16,7 +16,14 @@ add_line_to_bashrc()
   fi
 }
 
-working_directory=$(pwd)
+#working_directory=$(pwd)
+working_directory=~/git
+if [ ! -d "$working_directory" ]; then
+  echo "destination does not exist, creating directory: $working_directory"
+  mkdir $working_directory
+fi
+
+cd $working_directory
 
 echo "first we need to update."
 sudo apt update
@@ -50,6 +57,6 @@ cd ..
 
 echo finished!
 
-echo "You need to run 'source ~/.bashrc'"
+echo "You need to run the following command:"
 echo "'source ~/.bashrc'"
 echo "To update the path variables on any open terminals."
